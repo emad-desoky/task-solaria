@@ -1,0 +1,28 @@
+.tooltip {
+    position: fixed;
+    background: linear-gradient(rgb(103, 97, 97), #f9f9f9);
+    border: 2px solid rgb(162, 112, 162); /* Use a complementary color for the border */
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.2s ease-in-out; /* Smooth transition */
+    font-family: 'Arial', sans-serif; /* Use a clean font */
+    max-width: 200px; /* Limit width */
+}
+
+.tooltipContent {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.tooltip:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%; /* Positioning arrow on the right */
+    margin-top: -5px; /* Centering the arrow */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #007BFF; /* Arrow color */
+}
