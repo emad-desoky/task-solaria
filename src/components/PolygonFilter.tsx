@@ -33,7 +33,6 @@ const PolygonFilter: React.FC<Props> = ({ polygonData }) => {
     Math.max(...polygonData.map((d) => d.price)),
   ]);
 
-  // Use useCallback to memoize the function
   const shouldPolygonBeVisible = useCallback(
     (polygonDataItem: PolygonData): boolean => {
       return (
@@ -44,7 +43,7 @@ const PolygonFilter: React.FC<Props> = ({ polygonData }) => {
       );
     },
     [selectedStatus, priceRange]
-  ); // Include selectedStatus and priceRange as dependencies
+  );
 
   const updatePolygonVisibility = useCallback(
     (polygons: NodeListOf<SVGPolygonElement>) => {
@@ -66,7 +65,7 @@ const PolygonFilter: React.FC<Props> = ({ polygonData }) => {
       });
     },
     [polygonData, selectedStatus, shouldPolygonBeVisible]
-  ); // Include shouldPolygonBeVisible
+  );
 
   useEffect(() => {
     const polygons = document.querySelectorAll<SVGPolygonElement>("polygon");
