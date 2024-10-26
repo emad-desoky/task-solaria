@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import image from "./assets/0-floor.png";
 import svgOverlay from "./assets/0-floor.svg";
 import PolygonFilter from "./components/PolygonFilter";
@@ -103,7 +103,7 @@ const App: React.FC = () => {
           height: "auto",
           objectFit: "contain",
           position: "absolute",
-          top: isSmallDevice ? "0" : "-250px", // Adjust top based on device size
+          top: isSmallDevice ? "0" : "-250px", // responsiveness for smaller screens
           left: "0",
         }}
         src={image}
@@ -112,7 +112,7 @@ const App: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          top: isSmallDevice ? "0" : "-250px", // Adjust top based on device size
+          top: isSmallDevice ? "0" : "-250px", // responsiveness for smaller screens
           left: "0",
           width: "100%",
           height: "100%",
