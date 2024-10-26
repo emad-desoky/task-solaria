@@ -112,7 +112,7 @@ const App: React.FC = () => {
                     height: '100%',
                 }}
                 dangerouslySetInnerHTML={{ __html: svgHTML }}
-            />s
+            />
 
             {tooltip.visible && (
                 <Tooltip content={tooltip.content} position={tooltip.position} />
